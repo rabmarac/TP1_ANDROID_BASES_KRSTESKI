@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void dessiner(View view) {
+        setContentView(R.layout.activity_main);
         TextView editText = (TextView) findViewById(R.id.monTexte);
-        editText.setText("j'ai été clické");
+
+        setContentView(R.layout.gestionnaire2);
     }
 }
