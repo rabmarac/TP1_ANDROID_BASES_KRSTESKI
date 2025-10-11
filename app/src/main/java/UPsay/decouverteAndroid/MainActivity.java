@@ -8,7 +8,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +27,6 @@ public class MainActivity extends AppCompatActivity {
         TextView editText = (TextView) findViewById(R.id.monTexte);
         editText.setText("Bisou");*/
 
-        setContentView(R.layout.gestionnaire2);
+        /* this allows us to change context -> setContentView(R.layout.gestionnaire2); */
     }
 }
