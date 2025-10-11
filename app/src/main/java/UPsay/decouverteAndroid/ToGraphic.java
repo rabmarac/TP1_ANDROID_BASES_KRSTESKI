@@ -10,6 +10,8 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class ToGraphic extends View {
+
+    /* Constructeur de la classe ToGraphic */
     public ToGraphic(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }

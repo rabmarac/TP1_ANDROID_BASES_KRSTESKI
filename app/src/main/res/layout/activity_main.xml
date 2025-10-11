@@ -5,21 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="dessiner"
-    android:orientation="horizontal"
-    tools:context=".MainActivity">
+    android:baselineAligned="false"
+    android:onClick="dessin"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="OnClick">
 
-    <TextView
-        android:id="@+id/monTexte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="243dp"
-        android:layout_height="64dp"
+        <TextView
+            android:id="@+id/monTexte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="243dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:onClick="dessin"
+            android:text="@string/button" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Button" />
+        android:orientation="horizontal">
+
+        <UPsay.decouverteAndroid.ToGraphic
+            android:id="@+id/toGraphic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </TableRow>
 
 </LinearLayout>

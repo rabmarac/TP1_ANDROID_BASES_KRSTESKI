@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public void dessiner(View view) {
-        setContentView(R.layout.activity_main);
+    public void dessin(View view) {
+        /*setContentView(R.layout.activity_main);
         TextView editText = (TextView) findViewById(R.id.monTexte);
+        editText.setText("Bisou");*/
 
         setContentView(R.layout.gestionnaire2);
     }
