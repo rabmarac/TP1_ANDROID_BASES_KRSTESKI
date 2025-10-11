@@ -1,6 +1,9 @@
 package UPsay.decouverteAndroid;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -16,21 +19,25 @@ public class ToGraphic extends View {
         super(context, attrs);
     }
     @Override public void onDraw (Canvas canvas) {
-        Paint p = new Paint();
-        /*définir la couleur de l’objet de dessin */
+        @SuppressLint("DrawAllocation") Paint p = new Paint();
+        /* définir la couleur de l’objet de dessin */
         p.setColor(Color.BLACK);
-        /*définir son style en remplissage*/
+        /* définir son style en remplissage */
         p.setStyle(android.graphics.Paint.Style.FILL);
-        /*dessiner un rectangle qui occupe la totalité du View*/
+        /* dessiner un rectangle qui occupe la totalité du View */
         canvas.drawRect(0,0,getWidth(),getHeight(), p);
-        /*définir une autre couleur pour dessiner un texte*/
+        /* définir une autre couleur pour dessiner un texte */
         p.setColor(Color.GREEN);
-        /*définir la taille du texte*/
+        /* définir la taille du texte*/
         p.setTextSize(100);
-        /*définir le centre du texte comme étant son origine*/
+        /* définir le centre du texte comme étant son origine */
         p.setTextAlign(android.graphics.Paint.Align.CENTER);
-        /*dessiner le texte en positionnant son origine au centre du View */
+        /* dessiner le texte en positionnant son origine au centre du View */
         String texte = "Bonjour MONDE";
-        canvas.drawText(texte, getWidth()/2, getHeight()/2, p);
+        canvas.drawText(texte, (float) getWidth() /2, (float) getHeight() /2, p);
+
+        /* On créé le bitmap de l'image associer au jpg et on l'affiche avec drawBitmap */
+        @SuppressLint("DrawAllocation") Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.cat);
+        canvas.drawBitmap(b, 200, 200, p);
     }
 }
