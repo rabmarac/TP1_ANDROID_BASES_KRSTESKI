@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">TEST</string>
-    <string name="TextView">Hello</string>
-    <string name="button">Button</string>
-    <string name="TextView2">Button</string>
-    <string name="title_activity_main">MainActivity</string>
-</resources>
